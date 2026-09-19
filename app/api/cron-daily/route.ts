@@ -203,7 +203,10 @@ async function chiefOfStaff(rows: Rec[], today: string): Promise<string | null> 
       system,
       messages: [{ role: 'user', content: "Write today's short brief." }],
     })
-    return res.content.find((c) => c.type === 'text')?.text ?? null
+    const text = res.content.find((c) => c.type === 'text')?.text ?? null
+    // The prompt asks for RM, but Haiku still slips into "$4,200" / "$6K" — so
+    // enforce the currency here rather than trusting the model to follow it.
+    return text ? text.replace(/\$\s?(?=\d)/g, 'RM ') : null
   } catch (e) {
     console.error('[CFO] chiefOfStaff error:', e)
     return null
