@@ -16,7 +16,7 @@
 export const JARVIS = {
   // ── 👉 WHO ────────────────────────────────────────────────────────────────
   /** What your business is called. Jarvis introduces itself with this. */
-  businessName: 'Whitedge Marketing Sdn Bhd and Okmaya Group Sdn Bhd',
+  businessName: 'Okmaya Group Sdn Bhd',
   /** What Jarvis should call you. */
   ownerName: 'Ms Ivy',
   /** What you sell, in one line. */
