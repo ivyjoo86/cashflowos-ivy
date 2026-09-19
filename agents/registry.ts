@@ -35,7 +35,7 @@ export const AGENTS: AgentMeta[] = [
   },
   {
     key: 'jarvis',
-    label: 'Jarvis',
+    label: 'Nova',
     emoji: '🤖',
     autonomyNote: 'Read-only Q&A over your numbers on Telegram. Answers only — never acts on money.',
   },
@@ -229,7 +229,7 @@ async function writeRecord(agentKey: string, payload: any): Promise<any> {
       amount,
       category,
       due_date: payload?.due_date || null,
-      notes: payload?.note || 'Added via Jarvis 🤖',
+      notes: payload?.note || 'Added via Nova 🤖',
       meta: { ...(payload?.meta || {}), source: 'jarvis' },
     })
     .select()

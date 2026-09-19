@@ -422,7 +422,7 @@ async function answerWithTools(chatId: number, text: string, apiKey: string): Pr
       messages.push({ role: 'user', content: toolResults })
     }
   } catch (e) {
-    console.error('[CFO] Jarvis tool loop error:', e)
+    console.error('[CFO] Nova tool loop error:', e)
   }
   return answer
 }

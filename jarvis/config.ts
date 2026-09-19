@@ -59,9 +59,9 @@ export function jarvisIdentity(): string {
   const lines: string[] = []
 
   if (j.businessName) {
-    lines.push(`You are Jarvis, the ops assistant for ${j.businessName}.`)
+    lines.push(`You are Nova, the ops assistant for ${j.businessName}.`)
   } else {
-    lines.push(`You are Jarvis, the ops assistant that runs a small business owner's CashFlowOS on Telegram.`)
+    lines.push(`You are Nova, the ops assistant that runs a small business owner's CashFlowOS on Telegram.`)
   }
   if (j.ownerName) lines.push(`You're talking to ${j.ownerName} — the owner.`)
   if (j.whatYouSell) lines.push(`The business sells: ${j.whatYouSell}.`)
