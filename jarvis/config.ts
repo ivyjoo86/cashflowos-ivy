@@ -16,11 +16,11 @@
 export const JARVIS = {
   // ── 👉 WHO ────────────────────────────────────────────────────────────────
   /** What your business is called. Jarvis introduces itself with this. */
-  businessName: '',            // e.g. 'Bright Cafe'
+  businessName: 'Whitedge Marketing Sdn Bhd and Okmaya Group Sdn Bhd',
   /** What Jarvis should call you. */
-  ownerName: '',               // e.g. 'boss' · 'Kingsley'
+  ownerName: 'Ms Ivy',
   /** What you sell, in one line. */
-  whatYouSell: '',             // e.g. 'coffee catering for corporate events'
+  whatYouSell: 'trading, distribution and marketing',
   /** Who you sell to, in one line. */
   whoYouServe: '',             // e.g. 'HR and office managers at KL companies'
 
@@ -35,7 +35,12 @@ export const JARVIS = {
    * What matters most in your business — Jarvis leads with these when you ask
    * "what needs my attention today?". 2–4 lines is plenty.
    */
-  watch: [] as string[],       // e.g. ['unpaid invoices past 7 days', 'leads quiet 3+ days']
+  watch: [
+    'unpaid invoices past 7 days — say who owes what, oldest first',
+    'leads with no contact in 3+ days',
+    'appointments booked this week that still need prep',
+    'expenses waiting for my YES',
+  ] as string[],
 
   // ── 👉 NEVER ──────────────────────────────────────────────────────────────
   /**
