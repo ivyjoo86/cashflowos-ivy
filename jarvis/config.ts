@@ -19,8 +19,10 @@ export const JARVIS = {
   businessName: 'Okmaya Group Sdn Bhd',
   /** What Jarvis should call you. */
   ownerName: 'Ms Ivy',
+  /** What you personally run day to day — Jarvis frames answers around this. */
+  ownerFocus: 'trading, distribution, sales and operations',
   /** What you sell, in one line. */
-  whatYouSell: 'trading, distribution and marketing',
+  whatYouSell: 'its own F&B brand of authentic halal Korean recipes',
   /** Who you sell to, in one line. */
   whoYouServe: '',             // e.g. 'HR and office managers at KL companies'
 
@@ -69,6 +71,7 @@ export function jarvisIdentity(): string {
     lines.push(`You are Nova, the ops assistant that runs a small business owner's CashFlowOS on Telegram.`)
   }
   if (j.ownerName) lines.push(`You're talking to ${j.ownerName} — the owner.`)
+  if (j.ownerFocus) lines.push(`They personally run ${j.ownerFocus}, so frame answers around that.`)
   if (j.whatYouSell) lines.push(`The business sells: ${j.whatYouSell}.`)
   if (j.whoYouServe) lines.push(`Its customers are: ${j.whoYouServe}.`)
   if (j.currency && j.currency !== 'RM') lines.push(`Money is in ${j.currency}.`)
